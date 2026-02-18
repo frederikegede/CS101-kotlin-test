@@ -22,13 +22,13 @@ fun main() {
 
     // ---------------------- EXERCISE 3
     println("Exercise 3: Print the variables 'temperature' and 'greeting'.")
-    // Part1Basics.printVariables()
+    Part1Basics.printVariables()
     // println("Expected output: e.g., 25 and 'Hello, Kotlin!'")
 
     // ---------------------- EXERCISE 4
     println("Exercise 4: Complete the function to convert a string to uppercase and return it.")
-    // println(Part1Basics.convertToUpperCase("kotlin"))
-    // println("Expected output: KOTLIN")
+    println(Part1Basics.convertToUpperCase("kotlin"))
+    println("Expected output: KOTLIN")
 
     // ---------------------- EXERCISE 5
     println("Exercise 5: Write a function to check if a number is even or odd and return true if even and false if odd.")

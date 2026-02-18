@@ -16,14 +16,27 @@ object Part3ClassesAndObjects {
     // ---------------------- EXERCISE 1
     // Create a Book class with 3 attributes: title, author, and price (Double)
     // Add a method to display book details called displayDetails that prints title, author and price
+    public class Book (val title: String, val author: String, val price: Double) {
+        fun displayDetails() {
+            println("$title + $author + $price")
+        }
 
+        override fun toString(): String {
+            return "Book(title='$title', author='$author', price=$price)"
+        }
+    }
 
     // ---------------------- EXERCISE 2
     // Create a Student class with the attributes name, age, and grades (a list of integers)
     // The grades variable must not be in the contructor, but instead created inside the class.
     // Add methods to add a grade (addGrade), calculate the average grade (averageGrade as Double),
     // and display student details (displayDetails) which must print name, age and average grade
+    class Student(val mame: String, val age: Int) {
+        var grades = listOf<Int>()
+        fun addGrade(number: Int) {
 
+        }
+    }
 
     // ---------------------- EXERCISE 3
     // Create a BankAccount class with the attributes accountNumber, balance (Double), and accountHolder

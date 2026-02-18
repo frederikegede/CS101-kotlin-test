@@ -39,7 +39,32 @@ object Part4InheritanceAndAccessModification {
     // Implement the method work() for all classes, which prints a message indicating the type of work the employee is doing
     // E.g. an Employee.work() should print one thing and Developer.work() another
     // The work() method must print something and not be blank, but you can choose what you want it to print!
+    open class Employee( val name: String, val position: String, val salary: Float) {
+        open fun work() {
+            println("I am an Employee at Novo Nordisk")
+        }
 
+        override fun toString(): String {
+            return "Employee(name='$name', position='$position', salary=$salary)"
+        }
+    }
+
+    class Manager(val department: String) : Employee("Nikolai", "Manager", 45000f ){
+        override fun work() {
+            println("I am a Manager at Novo Nordisk")
+        }
+    }
+    class Developer(val programmingLanguage: String) : Employee("Frederik", "Developer", 35000f ){
+        override fun work() {
+            println("I am a Developer at Novo Nordisk")
+        }
+    }
+
+    class Intern(val school: String) : Employee("William", "Intern", 20000f ){
+        override fun work() {
+            println("I am an Intern at Novo Nordisk")
+        }
+    }
 
     // ---------------------- EXERCISE 3
     // Create a class named Course to represent course information
@@ -59,6 +84,14 @@ object Part4InheritanceAndAccessModification {
     //         }
     // }
 
+    open class Course(val courseName: String, val instructor: String) {
+        var credits = 0
+            set(credits) {0..6 }
+
+        val courseDuration: Int
+            get()
+
+    }
 
     // ---------------------- EXERCISE 4
     // Create a class Athlete with properties: id, name
